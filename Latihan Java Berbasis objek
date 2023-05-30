@@ -1,0 +1,154 @@
+//Latihan 2
+public class PenjualanMobil {
+    public static void main(String[] args) {
+        Mobil mobil1 = new Mobil("Merah", 334, "Toyota Supra", 6000000);
+        mobil1.getInfoMobil();
+        mobil1.maju();
+    }
+
+    static class Mobil {
+        private String warna;
+        private int kecepatan;
+        private String model;
+        private double harga;
+
+        public Mobil(String warna, int kecepatan, String model, double harga) {
+            this.warna = warna;
+            this.kecepatan = kecepatan;
+            this.model = model;
+            this.harga = harga;
+        }
+
+        public void getInfoMobil() {
+            System.out.println("Informasi Mobil:");
+            System.out.println("Warna: " + warna);
+            System.out.println("Kecepatan: " + kecepatan + " km/h");
+            System.out.println("Model: " + model);
+            System.out.println("Harga: $" + harga);
+            System.out.println();
+        }
+
+        public void maju() {
+            System.out.println("Mobil " + model + " maju dengan kecepatan " + kecepatan + " km/h");
+        }
+    }
+}
+
+
+
+
+
+
+
+public class PenjualanMobil {
+    public static void main(String[] args) {
+        // Membuat objek mobil
+        Mobil mobil1 = new Mobil("Toyota", "Supra", 2019, "Hitam");
+        Mobil mobil2 = new Mobil("Honda", "Civic", 2021, "Putih");
+
+        // Menampilkan informasi mobil
+        mobil1.displayInfo();
+        mobil2.displayInfo();
+
+        // Mengubah warna mobil
+        mobil1.setWarna("Merah");
+        mobil2.setWarna("Biru");
+
+        // Menampilkan informasi mobil setelah perubahan warna
+        mobil1.displayInfo();
+        mobil2.displayInfo();
+    }
+
+    static class Mobil {
+        private String merk;
+        private String model;
+        private int tahun;
+        private String warna;
+
+        public Mobil(String merk, String model, int tahun, String warna) {
+            this.merk = merk;
+            this.model = model;
+            this.tahun = tahun;
+            this.warna = warna;
+        }
+
+        public void setWarna(String warna) {
+            this.warna = warna;
+        }
+
+        public void displayInfo() {
+            System.out.println("Merk: " + merk);
+            System.out.println("Model: " + model);
+            System.out.println("Tahun: " + tahun);
+            System.out.println("Warna: " + warna);
+            System.out.println();
+        }
+    }
+}
+
+
+
+
+
+//Latihan 1
+import java.util.Scanner;
+
+public class MainClass {
+    public static void main(String[] args) {
+        sayHello(); // memanggil metode sayHello()
+
+        // Perintah berikut memanggil
+        // metode sayHelloTo(String nama), dengan
+        // memberi nilai "Budi" untuk variabel nama
+        sayHelloTo("Budi");
+
+        // Berikut ini, nilai variabel nama
+        // adalah "George"
+        String namaMahasiswa = "George";
+        sayHelloTo(namaMahasiswa);
+
+        // Di bawah ini memanggil metode
+        // inputNilaiInteger(String namaVariabel)
+        // untuk memberikan nilai variabel varInteger
+        // melalui input dari user, di metode tersebut
+        int varInteger = inputNilaiInteger("var Integer");
+        System.out.println("Nilai varInteger sekarang = " + varInteger);
+    }
+
+    static void sayHello() {
+        System.out.println("Hello, ini fungsi void");
+        System.out.println("Fungsi void tidak ada return");
+        System.out.println("Fungsi ini tanpa parameter,"
+                + " ditandai dengan tanda kurung "
+                + "yaitu () tanpa deklarasi "
+                + "variabel di dalamnya, "
+                + "yang berarti fungsi ini tidak "
+                + "menerima data ketika dipanggil "
+                + "dari luar");
+        System.out.println();
+    }
+
+    static void sayHelloTo(String nama) {
+        System.out.println("Hello " + nama);
+        System.out.println("Fungsi void tidak ada return");
+        System.out.println("Dengan parameter String nama,\n"
+                + "Berarti mendapat data bertipe "
+                + "String ketika dipanggil");
+        System.out.println();
+    }
+
+    static int inputNilaiInteger(String namaVariabel) {
+        Scanner inputScanner = new Scanner(System.in);
+        int nilaiInput;
+        System.out.println("Deklarasi fungsi ini tanpa "
+                + "keyword void,\n"
+                + "jadi menggunakan tipe int,\n"
+                + "sehingga ada return nilai int");
+        System.out.println("Silakan input " + namaVariabel);
+        nilaiInput = inputScanner.nextInt();
+        return nilaiInput; // nilaiInput bertipe int sebagai nilai return
+    }
+}
+
+
+
